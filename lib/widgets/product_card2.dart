@@ -22,66 +22,147 @@ class ProductCard2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        context.goNamed(AppRoutes.profileSettings); // Bu yerda nom to'g'irlandi
-      },
-      child: Card(
-        margin: const EdgeInsets.symmetric(vertical: 10),
-        child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Row(
-            children: [
-              Image.asset(
-                imagePath,
-                width: 80,
-                height: 80,
-                fit: BoxFit.cover,
-              ),
-              const SizedBox(width: 10),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      title,
-                      style: const TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
+    return Card(
+      margin: const EdgeInsets.symmetric(vertical: 10),
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Row(
+          children: [
+            Image.asset(
+              imagePath,
+              width: 80,
+              height: 80,
+              fit: BoxFit.cover,
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    price,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      color: Colors.green,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      Icon(Icons.star, color: Colors.orange, size: 16),
+                      Text(
+                        rating.toString(),
+                        style: const TextStyle(fontSize: 14),
                       ),
-                    ),
-                    Text(
-                      price,
-                      style: const TextStyle(
-                        fontSize: 16,
-                        color: Colors.green,
-                        fontWeight: FontWeight.bold,
+                      const SizedBox(width: 5),
+                      Text(
+                        "$orders orders",
+                        style:
+                            const TextStyle(fontSize: 14, color: Colors.grey),
                       ),
-                    ),
-                    Row(
-                      children: [
-                        Icon(Icons.star, color: Colors.orange, size: 16),
-                        Text(
-                          rating.toString(),
-                          style: const TextStyle(fontSize: 14),
-                        ),
-                        const SizedBox(width: 5),
-                        Text(
-                          "$orders orders",
-                          style:
-                              const TextStyle(fontSize: 14, color: Colors.grey),
-                        ),
-                      ],
-                    ),
-                    Text(
-                      shippingInfo,
-                      style: const TextStyle(fontSize: 14, color: Colors.green),
-                    ),
-                  ],
-                ),
+                    ],
+                  ),
+                  Text(
+                    shippingInfo,
+                    style: const TextStyle(fontSize: 14, color: Colors.green),
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+
+
+
+// ignore: camel_case_types
+class ProductCard3 extends StatelessWidget {
+  final String imagePath;
+  final String title;
+  final String price;
+  final double rating;
+  final int orders;
+  final String shippingInfo;
+
+  const ProductCard3({
+    super.key,
+    required this.imagePath,
+    required this.title,
+    required this.price,
+    required this.rating,
+    required this.orders,
+    required this.shippingInfo,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      margin: const EdgeInsets.symmetric(vertical: 10),
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Row(
+          children: [
+            Image.asset(
+              imagePath,
+              width: 80,
+              height: 80,
+              fit: BoxFit.cover,
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    price,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      color: Colors.green,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      Icon(Icons.star, color: Colors.orange, size: 16),
+                      Text(
+                        rating.toString(),
+                        style: const TextStyle(fontSize: 14),
+                      ),
+                      const SizedBox(width: 5),
+                      Text(
+                        "$orders orders",
+                        style:
+                            const TextStyle(fontSize: 14, color: Colors.grey),
+                      ),
+                    ],
+                  ),
+                  Text(
+                    shippingInfo,
+                    style: const TextStyle(fontSize: 14, color: Colors.green),
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );

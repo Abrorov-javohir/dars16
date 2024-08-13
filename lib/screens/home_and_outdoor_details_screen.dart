@@ -4,14 +4,16 @@ import 'package:flutter/material.dart';
 import 'package:dars16/widgets/category_card.dart';
 import 'package:go_router/go_router.dart';
 
-class ElectronicGadgetScreen extends StatefulWidget {
-  const ElectronicGadgetScreen({super.key});
+class HomeAndOutdoorDetailsScreen extends StatefulWidget {
+  const HomeAndOutdoorDetailsScreen({super.key});
 
   @override
-  State<ElectronicGadgetScreen> createState() => _ElectronicGadgetScreenState();
+  State<HomeAndOutdoorDetailsScreen> createState() =>
+      _HomeAndOutdoorDetailsScreenState();
 }
 
-class _ElectronicGadgetScreenState extends State<ElectronicGadgetScreen> {
+class _HomeAndOutdoorDetailsScreenState
+    extends State<HomeAndOutdoorDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -105,12 +107,12 @@ class _ElectronicGadgetScreenState extends State<ElectronicGadgetScreen> {
                 children: [
                   InkWell(
                     onTap: () {
-                      context.goNamed(AppRoutes
-                          .profileSettings); // Bu yerda nom to'g'irlandi
+                      context.goNamed(
+                          AppRoutes.sushilka); // Bu yerda nom to'g'irlandi
                     },
-                    child: const ProductCard2(
-                      imagePath: "assets/iphone12.png",
-                      title: "Iphone 12 is the wort phone",
+                    child: const ProductCard3(
+                      imagePath: "assets/image1.png",
+                      title: "Good for Clothes",
                       price: "\$10.70",
                       rating: 7.5,
                       orders: 154,
@@ -119,11 +121,11 @@ class _ElectronicGadgetScreenState extends State<ElectronicGadgetScreen> {
                   ),
                   InkWell(
                     onTap: () {
-                      context
-                          .goNamed(AppRoutes.ipad); // Bu yerda nom to'g'irlandi
+                      context.goNamed(
+                          AppRoutes.comfort_chair); // Bu yerda nom to'g'irlandi
                     },
-                    child: const ProductCard2(
-                      imagePath: "assets/ipad.png",
+                    child: const ProductCard3(
+                      imagePath: "assets/comfort_chair.png",
                       title: "Regular Fit Resort Shirt",
                       price: "\$57.70",
                       rating: 7.5,
@@ -134,9 +136,9 @@ class _ElectronicGadgetScreenState extends State<ElectronicGadgetScreen> {
                   InkWell(
                     onTap: () {
                       context.goNamed(
-                          AppRoutes.laptop); // Bu yerda nom to'g'irlandi
+                          AppRoutes.laptop2); // Bu yerda nom to'g'irlandi
                     },
-                    child: const ProductCard2(
+                    child: const ProductCard3(
                       imagePath: "assets/laptop.png",
                       title: "Regular Fit Resort Shirt",
                       price: "\$57.70",
@@ -148,24 +150,10 @@ class _ElectronicGadgetScreenState extends State<ElectronicGadgetScreen> {
                   InkWell(
                     onTap: () {
                       context.goNamed(
-                          AppRoutes.samsung); // Bu yerda nom to'g'irlandi
+                          AppRoutes.samsung2); // Bu yerda nom to'g'irlandi
                     },
-                    child: const ProductCard2(
-                      imagePath: "assets/samsung.png",
-                      title: "Regular Fit Resort Shirt",
-                      price: "\$57.70",
-                      rating: 7.5,
-                      orders: 154,
-                      shippingInfo: "Free Shipping",
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      context.goNamed(AppRoutes
-                          .samsung_galaxy); // Bu yerda nom to'g'irlandi
-                    },
-                    child: const ProductCard2(
-                      imagePath: "assets/samsung_S24_Ultra.png",
+                    child: const ProductCard3(
+                      imagePath: "assets/sofa.png",
                       title: "Regular Fit Resort Shirt",
                       price: "\$57.70",
                       rating: 7.5,
@@ -176,10 +164,24 @@ class _ElectronicGadgetScreenState extends State<ElectronicGadgetScreen> {
                   InkWell(
                     onTap: () {
                       context.goNamed(
-                          AppRoutes.headphone); // Bu yerda nom to'g'irlandi
+                          AppRoutes.samsung3); // Bu yerda nom to'g'irlandi
                     },
-                    child: const ProductCard2(
-                      imagePath: "assets/headphone.png",
+                    child: const ProductCard3(
+                      imagePath: "assets/image1.png",
+                      title: "Regular Fit Resort Shirt",
+                      price: "\$57.70",
+                      rating: 7.5,
+                      orders: 154,
+                      shippingInfo: "Free Shipping",
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      context.goNamed(
+                          AppRoutes.laptop3); // Bu yerda nom to'g'irlandi
+                    },
+                    child: const ProductCard3(
+                      imagePath: "assets/comfort_chair.png",
                       title: "Regular Fit Resort Shirt",
                       price: "\$57.70",
                       rating: 7.5,

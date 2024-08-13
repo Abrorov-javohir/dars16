@@ -36,12 +36,6 @@ class ShoppingCartScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Shopping cart"),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            // Handle back button press
-          },
-        ),
       ),
       body: Column(
         children: [

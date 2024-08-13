@@ -2,8 +2,8 @@ import 'package:dars16/widgets/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class ProductDetailScreen extends StatelessWidget {
-  const ProductDetailScreen({super.key});
+class Samsung2 extends StatelessWidget {
+  const Samsung2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class ProductDetailScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.asset(
-              "assets/iphone12.png",
+              "assets/samsung.png",
               height: 200,
               fit: BoxFit.cover,
             ),
@@ -104,16 +104,16 @@ class ProductDetailScreen extends StatelessWidget {
               child: const Text("Read more"),
             ),
             const Divider(),
-            const ListTile(
-              leading: CircleAvatar(
+            ListTile(
+              leading: const CircleAvatar(
                 backgroundColor: Colors.blue,
                 child: Text("R"),
               ),
-              title: Text("Supplier: Guanjoi Trading LLC"),
-              subtitle: Text("Germany"),
+              title: const Text("Supplier: Guanjoi Trading LLC"),
+              subtitle: const Text("Germany"),
               trailing: Row(
                 mainAxisSize: MainAxisSize.min,
-                children: [
+                children: const [
                   Icon(Icons.verified, color: Colors.green),
                   SizedBox(width: 5),
                   Icon(Icons.local_shipping, color: Colors.blue),
