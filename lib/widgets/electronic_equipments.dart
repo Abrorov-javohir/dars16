@@ -14,6 +14,7 @@ class _ElectronicEquipmentsState extends State<ElectronicEquipments> {
     return SizedBox(
       height: 200,
       child: ListView(
+        padding: EdgeInsets.all(8),
         scrollDirection: Axis.horizontal,
         children: const [
           ProductCard(

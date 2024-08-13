@@ -16,10 +16,24 @@ class _ElectronicGadgetsState extends State<ElectronicGadgets> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(height: 10),
+        Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: const Row(
+            children: [
+              Text(
+                "Electronic Gadgets",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+        ),
         SizedBox(
           height: 200,
           child: ListView(
+            padding: EdgeInsets.all(8),
             scrollDirection: Axis.horizontal,
             children: [
               InkWell(

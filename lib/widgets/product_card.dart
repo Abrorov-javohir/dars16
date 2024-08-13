@@ -16,7 +16,7 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 150,
-      margin: const EdgeInsets.only(right: 10),
+      margin: const EdgeInsets.only(right: 20),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),
@@ -33,7 +33,7 @@ class ProductCard extends StatelessWidget {
         children: [
           Image.asset(
             imagePath,
-            height: 130,
+            height: 110,
             fit: BoxFit.cover,
           ),
           const SizedBox(height: 10),

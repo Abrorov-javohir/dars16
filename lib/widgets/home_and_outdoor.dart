@@ -31,6 +31,7 @@ class _HomeAndOutdoorState extends State<HomeAndOutdoor> {
           SizedBox(
             height: 200,
             child: ListView(
+              padding: EdgeInsets.all(8),
               scrollDirection: Axis.horizontal,
               children: [
                 InkWell(

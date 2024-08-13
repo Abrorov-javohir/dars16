@@ -40,21 +40,22 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const TextField(
-              decoration: InputDecoration(
-                hintText: "Search",
-                prefixIcon: Icon(
-                  Icons.search,
+            const Padding(
+              padding: EdgeInsets.all(16.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: "Search",
+                  prefixIcon: Icon(
+                    Icons.search,
+                  ),
+                  border: OutlineInputBorder(),
                 ),
-                border: OutlineInputBorder(),
               ),
-            ),
-            const SizedBox(
-              height: 20,
             ),
             SizedBox(
               height: 60,
               child: ListView(
+                padding: EdgeInsets.all(8),
                 scrollDirection: Axis.horizontal,
                 children: const [
                   CategoryCard(title: "All category"),
@@ -75,13 +76,6 @@ class _HomeScreenState extends State<HomeScreen> {
             const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  "Deals and offers",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
                 CountdownTimer(),
               ],
             ),
@@ -94,31 +88,11 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             const SizedBox(height: 20),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: ElectronicEquipments(),
-            ),
+            ElectronicEquipments(),
             const SizedBox(height: 20),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: HomeAndOutdoor(),
-            ),
+            HomeAndOutdoor(),
             const SizedBox(height: 20),
-            const Row(
-              children: [
-                Text(
-                  "Electronic Gadgets",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: ElectronicGadgets(),
-            ),
+            ElectronicGadgets(),
             SizedBox(
               height: 20,
             ),
